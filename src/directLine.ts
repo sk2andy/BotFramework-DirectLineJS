@@ -896,9 +896,8 @@ export class DirectLine implements IBotConnection {
                 try {
                     // set node user agent
                     // @ts-ignore
-                    const os = require('os');
                     const { arch, platform, version } = process;
-                    this._userAgent = `Node.js,Version=${version}; ${platform} ${os.release()}; ${arch}`
+                    this._userAgent = `Node.js,Version=${version}; ${platform}; ${arch}`
                 } catch {
                     // no-op
                 }
